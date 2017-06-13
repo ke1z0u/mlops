@@ -1,0 +1,15 @@
+# Stop Apache
+
+# Update source code
+
+# Reset environment
+
+# Copy Config files from Template
+
+# Mount cifs http://docs.ansible.com/ansible/mount_module.html
+- name: mount data folder
+  mount: state="present"
+  fstype="cifs"
+  opts="username=USER,password=PASSWORD,src="//host_ip/folder" name="/mnt/folder"
+  sudo_user: root
+  sudo: yes
